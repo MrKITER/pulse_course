@@ -2,6 +2,8 @@
 @import 'base/mixins'
 @import 'blocks/promo'
 @import 'blocks/header'
+@import 'blocks/consultation'
+@import 'blocks/forms'
 @import 'blocks/buttons'
 
 *
@@ -15,11 +17,6 @@
     background-color: #F6F6F6
     min-height: 473px
     padding-top: 73px
-    &__text
-        font-weight: 700
-        font-size: 30px
-        text-align: center
-        color: #0D0D0D
     &__wrapper
         margin-top: 60px
         display: flex
@@ -47,5 +44,16 @@
         .red
             text-decoration-line: underline
             color: #FF0000
+
+.tittle
+    font-weight: 700
+    font-size: 30px
+    text-align: center
+    color: #0D0D0D
+    text-transform: uppercase
+    &_left
+        font-size: 36px
+        color: #FFFFFF
+        text-align: left
 
 @import 'media'

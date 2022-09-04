@@ -42,37 +42,39 @@ $(document).ready(function(){
     $('[data-modal=consultation]').on('click', function() {
         $('.overlay, #consultation').fadeIn('slow');
     });
-
     $('.modal__close').on('click', function() {
-        $('.overlay, #consultation, #order, #thanks').fadeOut('slow');
+        $('.overlay, #consultation, #thanks, #order').fadeOut('slow');
     });
 
     $('.button_mini').each(function(i) {
         $(this).on('click', function() {
-            $('#order .modal__descr').text($('.catalog-item__subtittle').eq(i).text());
+            $('#order .modal__descr').text($('.catalog-item__subtitle').eq(i).text());
             $('.overlay, #order').fadeIn('slow');
-        });
+        })
     });
 
-    // Validation
-
     function validateForms(form){
-        $('form').validate({
+        $(form).validate({
             rules: {
-                name: "required",
+                name: {
+                    required: true,
+                    minlength: 2
+                },
                 phone: "required",
                 email: {
                     required: true,
                     email: true
                 }
             },
-
             messages: {
-                name: "Пожалуйста введите свое имя",
-                phone: "Пожалуйста введите свой телефон",
+                name: {
+                    required: "Пожалуйста, введите свое имя",
+                    minlength: jQuery.validator.format("Введите {0} символа!")
+                  },
+                phone: "Пожалуйста, введите свой номер телефона",
                 email: {
-                    required: "Пожалуйста введите свой почтовый адрес",
-                    email: "Неправильно введен адрес почты",
+                  required: "Пожалуйста, введите свою почту",
+                  email: "Неправильно введен адрес почты"
                 }
             }
         });

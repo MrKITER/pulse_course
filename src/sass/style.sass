@@ -1,41 +1,13 @@
+@import 'base/variables'
+@import 'base/mixins'
+@import 'base/animation'
+
 *
     font-family: 'Museo Sans Cyrl', sans-serif
 
 .container
     max-width: 950px
     margin: 0 auto
-
-.benefits
-    background-color: #F6F6F6
-    min-height: 473px
-    padding-top: 73px
-    &__wrapper
-        margin-top: 60px
-        display: flex
-        justify-content: space-between
-        align-items: center
-    &__item
-        width: 277px
-        min-height: 257px
-        font-weight: 300
-        font-size: 14px
-        text-align: center
-        color: #0D0D0D
-        img
-            display: block
-            margin: 0 auto
-            margin-bottom: 35px
-        span
-            display: block
-            margin: 0 auto
-            margin-bottom: 20px
-            font-weight: 700
-            font-size: 18px
-            text-align: center
-            color: #0D0D0D
-        .red
-            text-decoration-line: underline
-            color: #FF0000
 
 .tittle
     font-weight: 700
@@ -48,10 +20,9 @@
         color: #FFFFFF
         text-align: left
 
-@import 'base/variables'
-@import 'base/mixins'
 @import 'blocks/promo'
 @import 'blocks/header'
+@import 'blocks/benefits'
 @import 'blocks/consultation'
 @import 'blocks/forms'
 @import 'blocks/carousel'
@@ -60,4 +31,5 @@
 @import 'blocks/comments'
 @import 'blocks/footer'
 @import 'blocks/modal'
+@import 'blocks/pageup'
 @import 'media'
